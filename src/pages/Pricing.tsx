@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 import ThreeScene from '../components/ThreeScene'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export default function Pricing() {
   return (
     <div className="relative min-h-screen bg-[#0a0a0a] overflow-hidden">
-      <ThreeScene />
+      <ErrorBoundary><ThreeScene /></ErrorBoundary>
       <div className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold gradient-text">LA-TO-RA</Link>

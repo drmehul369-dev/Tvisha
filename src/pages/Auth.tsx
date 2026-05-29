@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import ThreeScene from '../components/ThreeScene'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export default function Auth() {
   const [mode, setMode] = useState<'login' | 'register'>('login')
 
   return (
     <div className="relative min-h-screen flex items-center justify-center px-6">
-      <ThreeScene />
+      <ErrorBoundary><ThreeScene /></ErrorBoundary>
       <div className="absolute top-0 left-0 right-0 z-50 p-6">
         <Link to="/" className="text-2xl font-bold gradient-text inline-block">LA-TO-RA</Link>
       </div>
